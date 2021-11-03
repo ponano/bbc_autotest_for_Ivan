@@ -18,8 +18,6 @@ describe('Найти элементы по заданию Ивана', () => {
         cy.get('#orb-nav-links > ul > .orb-nav-worklife > a').should('exist')
         cy.get('#orb-nav-links > ul > .orb-nav-future > a').should('exist')
         cy.get('#orb-nav-links > ul > .orb-nav-music > a').should('exist')
-        cy.stop
-
-
+   
     })
   })
