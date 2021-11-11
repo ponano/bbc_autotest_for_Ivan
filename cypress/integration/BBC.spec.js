@@ -13,6 +13,15 @@ describe('Найти элементы по заданию Ивана', () => {
     })
     it('Нати чётные элементы верхнего меню, которые не скрыты в More ', () => {
 
+        // cy.get('#orb-nav-links > ul > .orb-nav-newsdotcom > a').should('be.visible')
+        // cy.get('#orb-nav-links > ul > .orb-nav-reeldotcom > a').should('be.visible')
+        // cy.get('#orb-nav-links > ul > .orb-nav-traveldotcom > a').should('be.visible')
+        // cy.get('#orb-nav-links > ul > .orb-nav-culture > a').should('be.visible')
+
+        cy.xpath('//*[@id="orb-nav-links"]/ul/li[2]').should('be.visible')
+        cy.xpath('//*[@id="orb-nav-links"]/ul/li[4]').should('be.visible')
+        cy.xpath('//*[@id="orb-nav-links"]/ul/li[6]').should('be.visible')
+        cy.xpath('//*[@id="orb-nav-links"]/ul/li[8]').should('be.visible')
    
     })
   })
