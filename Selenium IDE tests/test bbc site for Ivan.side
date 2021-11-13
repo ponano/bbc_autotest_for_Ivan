@@ -1,0 +1,141 @@
+{
+  "id": "2173ae6d-02d6-4d05-b2ed-5a51e6681f67",
+  "version": "2.0",
+  "name": "test bbc site for Ivan",
+  "url": "https://www.bbc.com",
+  "tests": [{
+    "id": "3cf0e710-446f-4d73-88dd-7a4a87b375b9",
+    "name": "1 find search box",
+    "commands": [{
+      "id": "277c7f17-3c03-4434-9d33-01105917f1bf",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "906e478d-3129-43ad-bf2e-37ab2d0bdcf4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3e2eed0-0172-4d97-a9e5-798b97c0e559",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=orb-search-q",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3c9a679b-a5f6-4c50-a916-0be8ca9c8bfd",
+    "name": "2 Find weather button",
+    "commands": [{
+      "id": "29da0c55-67dc-4409-9baa-4e1f5d1a61fb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef464051-79e7-48c8-aeb5-2e71588650e4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=More",
+      "targets": [
+        ["linkText=More", "linkText"],
+        ["css=.istats-notrack", "css:finder"],
+        ["xpath=//a[contains(text(),'More')]", "xpath:link"],
+        ["xpath=//li[@id='orb-nav-more']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#orb-footer')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'More')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09f37a72-0767-41a4-9df6-005e1988cb06",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Weather",
+      "targets": [
+        ["linkText=Weather", "linkText"],
+        ["css=li:nth-child(11) > .ssrcss-1siiay3-MenuLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Weather')]", "xpath:link"],
+        ["xpath=//div[@id='global-navigation-menu']/div/div/ul/li[11]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.bbc.com/weather')]", "xpath:href"],
+        ["xpath=//li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Weather')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "87f2a680-d021-4b2f-9f37-108f4f56c97e",
+    "name": "3 Find the first box from the news block",
+    "commands": [{
+      "id": "06059c1b-4dee-4e2c-89ac-96562bec7867",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "416bcf3e-4d1b-419d-978c-25e45743cf0b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.media--hero > .block-link__overlay-link",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "71d4805e-031a-4bfd-b6e5-0fa0a0734870",
+    "name": "4 Find odd buttons from the top navigation bar",
+    "commands": [{
+      "id": "b0773b44-f74e-4619-98a5-becf02374ffe",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1275cc5b-3e66-4e3c-9577-1c03defd6a11",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//li[2]/a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14a1c026-fab4-4334-a758-c68247882a2f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//li[4]/a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c09ba11a-b111-4577-b8b5-428807c6f827",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//li[6]/a",
+      "targets": [
+        ["linkText=Travel", "linkText"],
+        ["css=#orb-nav-links .orb-nav-traveldotcom > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Travel')]", "xpath:link"],
+        ["xpath=//div[@id='orb-nav-links']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.bbc.com/travel')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Travel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "20c41cfa-6cbb-4a9a-9586-67cf8d78a961",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3cf0e710-446f-4d73-88dd-7a4a87b375b9"]
+  }],
+  "urls": ["https://www.bbc.com/"],
+  "plugins": []
+}
