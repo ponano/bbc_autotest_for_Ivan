@@ -112,10 +112,25 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "c09ba11a-b111-4577-b8b5-428807c6f827",
+      "id": "77f502be-41c2-4f0f-bb15-a678ca755cb6",
       "comment": "",
       "command": "assertElementPresent",
       "target": "xpath=//li[6]/a",
+      "targets": [
+        ["linkText=Travel", "linkText"],
+        ["css=#orb-nav-links .orb-nav-traveldotcom > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Travel')]", "xpath:link"],
+        ["xpath=//div[@id='orb-nav-links']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.bbc.com/travel')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Travel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c09ba11a-b111-4577-b8b5-428807c6f827",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//li[8]/a",
       "targets": [
         ["linkText=Travel", "linkText"],
         ["css=#orb-nav-links .orb-nav-traveldotcom > a", "css:finder"],
