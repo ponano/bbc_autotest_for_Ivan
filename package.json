@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "cypress-xpath": "^1.6.2",
+    "del": "^6.0.0",
+    "lodash": "^4.17.21"
+  }
+}
